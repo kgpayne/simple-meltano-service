@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "simple-meltano-service"
+version = "0.1.0"
+description = "POC Meltano Run Service"
+authors = ["Ken Payne <ken@meltano.com>"]
+readme = "README.md"
+packages = [{ include = "simple_meltano_service" }]
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.12"
+fastapi = { version = "^0.103.1", extras = ["all"] }
+meltano = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
